@@ -6,9 +6,9 @@ export default function App() {
     <View style={styles.content}>
       <Text style={styles.titleText}>TimeAudit! Track, Write, Audit!</Text>
       <View
-        style={styles.auditInput}
+        style={styles.inputContainer }
       >
-        <TextInput placeholder='What do you want to add' />
+        <TextInput style={styles.textInput} placeholder='What do you want to add' />
         <Button title='Add now' />
       </View>
     </View>
@@ -26,9 +26,17 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ff5f00",
     padding: 10,
   },
-  auditInput:{
+  inputContainer:{
     flexDirection: "row",
     justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  textInput:{
+    borderWidth: 1,
+    borderColor:'#cccccc',
+    width:'70%',
+    marginRight:10,
+    padding:10
   }
 });
 
